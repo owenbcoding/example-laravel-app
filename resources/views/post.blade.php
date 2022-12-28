@@ -10,7 +10,7 @@
 <body>
 
     <article class="bg-white text-black max-w-xl m-auto font-sans pb-10 border-slate-400">
-        {!! $content !!}
+        {!! $post !!}
     </article>
 
 </body>
