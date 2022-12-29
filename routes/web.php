@@ -17,7 +17,11 @@ use Illuminate\Support\Facades\Route;
 // In place of the five for the cache can add now()->addDays() addEtc
 
 Route::get('/', function () {
-    return view('posts');
+    $posts = Post::all();
+
+    return view('posts', [
+        'posts' => $posts
+    ]);
 });
 
 Route::get('posts/{post}', function ($slug) {
@@ -25,7 +29,7 @@ Route::get('posts/{post}', function ($slug) {
     $post = Post::find($slug);
 
     return view('post', [
-        'post' => $post
+        'post' => Post::find($slug)
     ]); 
 
 
