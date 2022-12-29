@@ -12,7 +12,12 @@
 </head>
 
 <body class="bg-white text-black max-w-xl m-auto font-sans">
-    <article class="pb-10 border-b-2 border-slate-400">
+    <?php foreach ($posts as $post) : ?>
+        <article>
+            <?= $post; ?>
+        </article>
+    <?php endforeach; ?>
+    {{-- <article class="pb-10 border-b-2 border-slate-400">
         <h1 class="text-3xl font-bold mb-10 mt-10 text-center">
             <a href="/posts/my-first-post">First Post!</a>
         </h1>
@@ -50,7 +55,7 @@
             aperiam, fugit perspiciatis ab dolorum facilis quae inventore adipisci veritatis asperiores ipsam ipsa
             aspernatur! Cumque deserunt expedita consequatur dolore molestias sapiente ea nisi minima laudantium fugit
             accusantium, minus itaque quod earum ratione quis accusamus vitae eius.</p>
-    </article>
+    </article> --}}
 </body>
 
 </html>
